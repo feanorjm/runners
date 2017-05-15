@@ -1,0 +1,328 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+    <div class="right_col" role="main">
+      <div class="">
+
+        <!--<div class="page-title">
+          <div class="title_left">
+            <h3>TRANSACCIONES</h3>
+          </div>
+        </div>-->
+        <div class="clearfix"></div>
+        <div class="row">
+            <div <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Nuevo Corredor <small>Ingrese los siguientes datos</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <!--<form class="form-inline" data-parsley-validate action="" method="post">{% csrf_token %}
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-5 col-xs-12" for="{{ rut.id_for_label }}">Rut </label>
+                            <div>
+                                {{ form.rut }}
+                            </div>
+                            <div>
+                                {{ form.rut.errors }}
+                            </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-5 col-xs-12" for="{{ nombre.id_for_label }}">Nombre </label>
+                            <div>
+                                {{ form.nombre }}
+                            </div>
+                            <div>
+                                {{ form.nombre.errors }}
+                            </div>
+                      </div>
+                        <div class="form-group">
+                            <label class="control-label" for="{{ apellido_pat.id_for_label }}">Apellido paterno </label>
+                            <div>
+                                {{ form.apellido_pat }}
+                            </div>
+                            <div >
+                                {{ form.apellido_pat.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="{{ apellido_mat.id_for_label }}">Apellido materno </label>
+                            <div >
+                                {{ form.apellido_mat }}
+                            </div>
+                            <div>
+                                {{ form.apellido_mat.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="{{ talla_polera.id_for_label }}">Talla polera </label>
+                            <div >
+                                {{ form.talla_polera }}
+                            </div>
+                            <div >
+                                {{ form.talla_polera.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-5 col-sm-3 col-xs-12" for="{{ correo.id_for_label }}">Correo </label>
+                            <div >
+                                {{ form.correo }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.correo.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-5 col-sm-3 col-xs-12" for="{{ ciudad.id_for_label }}">Ciudad </label>
+                            <div >
+                                {{ form.ciudad }}
+                            </div>
+                            <div >
+                                {{ form.ciudad.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="{{ pais.id_for_label }}">Pais </label>
+                            <div ">
+                                {{ form.pais }}
+                            </div>
+                            <div >
+                                {{ form.pais.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="{{ telefono.id_for_label }}">Telefono </label>
+                            <div >
+                                {{ form.telefono }}
+                            </div>
+                            <div >
+                                {{ form.telefono.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="{{ team.id_for_label }}">Team </label>
+                            <div >
+                                {{ form.team }}
+                            </div>
+                            <div >
+                                {{ form.team.errors }}
+                            </div>
+                        </div>
+                        <div >
+                            <label class="control-label" for="{{ medicamentos.id_for_label }}">Medicamentos </label>
+                            <div >
+                                {{ form.medicamentos }}
+                            </div>
+                            <div >
+                                {{ form.medicamentos.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="{{ alergias.id_for_label }}">Alergias </label>
+                            <div >
+                                {{ form.alergias }}
+                            </div>
+                            <div>
+                                {{ form.alergias.errors }}
+                            </div>
+                        </div>
+                    </form>-->
+
+
+
+
+
+                      <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="" method="post">{% csrf_token %}
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ rut.id_for_label }}">Rut </label>
+                            <div class="col-md-4">
+                                {{ form.rut }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.rut.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ nombre.id_for_label }}">Nombre </label>
+                            <div class="col-md-4">
+                                {{ form.nombre }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.nombre.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ apellido_pat.id_for_label }}">Apellido paterno </label>
+                            <div class="col-md-4">
+                                {{ form.apellido_pat }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.apellido_pat.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ apellido_mat.id_for_label }}">Apellido materno </label>
+                            <div class="col-md-4">
+                                {{ form.apellido_mat }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.apellido_mat.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ talla_polera.id_for_label }}">Talla polera </label>
+                            <div class="col-md-4">
+                                {{ form.talla_polera }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.talla_polera.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ correo.id_for_label }}">Correo </label>
+                            <div class="col-md-4">
+                                {{ form.correo }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.correo.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ ciudad.id_for_label }}">Ciudad </label>
+                            <div class="col-md-4">
+                                {{ form.ciudad }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.ciudad.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ pais.id_for_label }}">Pais </label>
+                            <div class="col-md-4">
+                                {{ form.pais }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.pais.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ telefono.id_for_label }}">Telefono </label>
+                            <div class="col-md-4">
+                                {{ form.telefono }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.telefono.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ team.id_for_label }}">Team </label>
+                            <div class="col-md-4">
+                                {{ form.team }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.team.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ medicamentos.id_for_label }}">Medicamentos </label>
+                            <div class="col-md-4">
+                                {{ form.medicamentos }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.medicamentos.errors }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ alergias.id_for_label }}">Alergias </label>
+                            <div class="col-md-4">
+                                {{ form.alergias }}
+                            </div>
+                            <div class="col-md-4">
+                                {{ form.alergias.errors }}
+                            </div>
+                        </div>
+                        <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button id="boton_tipo" type="submit" class="btn btn-success">Ingresar</button>
+                          <button type="button" id="limpiar" class="btn btn-default">Limpiar</button>
+                        </div>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+        <!-- /page content -->
+
+    <!-- jQuery -->
+    <!--<script type="text/javascript" src="{% static 'vendors/jquery/dist/jquery.min.js' %}"></script>-->
+    <!--<script type="text/javascript" src="{% static 'smart-selects/admin/js/chainedfk.js' %}"></script>-->
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <!-- FastClick -->
+    <script type="text/javascript" src="{% static 'vendors/fastclick/lib/fastclick.js' %}"></script>
+    <!-- NProgress -->
+    <script type="text/javascript" src="{% static 'vendors/nprogress/nprogress.js' %}"></script>
+    <!-- bootstrap-progressbar -->
+    <script type="text/javascript" src="{% static 'vendors/bootstrap-progressbar/bootstrap-progressbar.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/datepicker/daterangepicker.js' %}"></script>
+    <!-- bootstrap-wysiwyg -->
+    <script type="text/javascript" src="{% static 'vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'vendors/google-code-prettify/src/prettify.js' %}"></script>
+    <!-- Select2 -->
+    <script type="text/javascript" src="{% static 'vendors/select2/dist/js/select2.full.min.js' %}"></script>
+    <!-- Autosize -->
+    <script type="text/javascript" src="{% static 'vendors/autosize/dist/autosize.min.js' %}"></script>
+    <!-- jQuery autocomplete -->
+    <script type="text/javascript" src="{% static 'vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js' %}"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'js/jquery.price_format.2.0.min.js' %}"></script>
+
+    <!-- bootstrap-daterangepicker -->
+    <script>
+      $(document).ready(function() {
+        $('#birthday').daterangepicker({
+          singleDatePicker: true,
+          calender_style: "picker_4",
+            format: "YYYY-MM-DD"
+        }, function(start, end, label) {
+          console.log(start.toISOString(), end.toISOString(), label);
+        });
+      });
+    </script>
+
+
+    <!-- Autosize -->
+    <script>
+      $(document).ready(function() {
+        autosize($('.resizable_textarea'));
+      });
+    </script>
+
+
+{% endblock %}
